@@ -16,6 +16,25 @@ Browser dashboard showing bin status and routing observations. The street layout
 
 Sixteen simulated nodes: one gateway and fifteen bins. Node colours identify application types. Radio-traffic arrows show activity, not a complete end-to-end packet trace.
 
+## 📡 System architecture
+
+```mermaid
+flowchart TD
+    D["Synthetic resident deposits"] --> B["15 bin nodes: IDs 2–16"]
+    C["Scheduled collection process"] --> B
+    B -->|"UDP readings over RPL / 6LoWPAN"| G["Gateway: node 1"]
+    G --> A["Received readings and threshold alerts"]
+    B -->|"Local events and parent observations"| L["Cooja output log"]
+    A --> L
+    L --> P["Python log parser"]
+    P --> W["Safari dashboard: live view"]
+    R["Embedded recorded events"] --> W2["Safari dashboard: replay"]
+```
+
+The wireless network runs inside Cooja. The dashboard reads logged events;
+it does not control routing, generate radio packets, or dispatch collections.
+The neighbourhood map is illustrative and differs from the Cooja radio topology.
+
 ## Academic project
 
 - **Students:** Anandita Nagpal and Navroop Singh Walia
@@ -103,3 +122,35 @@ Collection is a predetermined simulated service. The gateway does not dispatch o
 The application builds on Contiki-NG's `examples/rpl-udp` example. Upstream copyright and licence notices must be retained where applicable. Consult the Contiki-NG repository for its licensing and documentation.
 
 Contiki-NG: https://github.com/contiki-ng/contiki-ng
+
+## Reproducibility
+
+The demonstrated project used Contiki-NG commit:
+
+`735e87c3e5060e9c427b214e55c372967f595c04`
+
+The tested host was macOS on Apple Silicon, with Java 25 for Cooja.
+Cooja submodule commit:
+
+`fabff3ee41eeeb6f3de7bd11f7c9cdf0a7d7dfc4`
+
+These commit identifiers record source revisions. Local modifications
+and installed build tools must also be considered when reproducing a run.
+
+The supplied `.csc` file defines the simulation configuration.
+Recorded logs are evidence from particular runs; they do not guarantee
+identical outcomes in other environments or configurations.
+
+## Simulation parameters
+
+| Parameter | Configured value |
+|---|---|
+| Random seed | 123456 |
+| Transmission range | 50.0 m |
+| Interference range | 100.0 m |
+| Configured TX success ratio | 1.0 |
+| Configured RX success ratio | 1.0 |
+
+Source: `neighbourhood-demo.csc`. These are radio-model settings,
+not measured delivery results. Ratios of 1.0 do not guarantee 100% PDR;
+connectivity, interference and protocol behaviour still matter.
