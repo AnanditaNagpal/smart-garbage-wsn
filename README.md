@@ -154,3 +154,12 @@ identical outcomes in other environments or configurations.
 Source: `neighbourhood-demo.csc`. These are radio-model settings,
 not measured delivery results. Ratios of 1.0 do not guarantee 100% PDR;
 connectivity, interference and protocol behaviour still matter.
+
+
+## 📊 Recorded experiment results
+
+[Experiment methodology and raw logs](experiments/fixed-vs-adaptive/README.md)
+
+[Generated results table](experiments/fixed-vs-adaptive/RESULTS.md)
+
+These earlier experiments use a different filling model from the enhanced collection demo.
