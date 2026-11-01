@@ -2,6 +2,8 @@
 
 # 🌿 Smart Garbage Neighbourhood WSN
 
+[![Project checks](https://github.com/AnanditaNagpal/smart-garbage-wsn/actions/workflows/checks.yml/badge.svg)](https://github.com/AnanditaNagpal/smart-garbage-wsn/actions/workflows/checks.yml)
+
 A software-only smart garbage bin monitoring project using Contiki-NG and Cooja, with a Python-powered browser dashboard.
 
 ## 🖼️ Project screenshots
