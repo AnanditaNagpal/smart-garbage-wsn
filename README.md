@@ -165,3 +165,7 @@ connectivity, interference and protocol behaviour still matter.
 [Generated results table](experiments/fixed-vs-adaptive/RESULTS.md)
 
 These earlier experiments use a different filling model from the enhanced collection demo.
+
+## Demonstration guide
+
+See the [step-by-step demonstration guide](docs/DEMO.md) for recorded replay, live simulation, results and troubleshooting.
