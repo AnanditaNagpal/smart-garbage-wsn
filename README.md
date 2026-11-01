@@ -55,6 +55,12 @@ The neighbourhood map is illustrative and differs from the Cooja radio topology.
 - Live log viewing and recorded replay in a neighbourhood dashboard.
 - Logged RPL preferred-parent observations and a selected parent-chain display.
 
+## ♻️ Illustrative fill-and-collection cycle
+
+![Illustrative bin filling and collection cycle](assets/bin-cycle.gif)
+
+Decorative animation explaining the concept; not measured simulation output.
+
 ## Files
 
 | File | Purpose |
