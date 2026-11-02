@@ -175,3 +175,12 @@ These earlier experiments use a different filling model from the enhanced collec
 ## Demonstration guide
 
 See the [step-by-step demonstration guide](docs/DEMO.md) for recorded replay, live simulation, results and troubleshooting.
+
+## License and attribution
+
+Our original contributions are licensed under the BSD 3-Clause license
+in [LICENSE](LICENSE).
+
+This project adapts Contiki-NG's rpl-udp example. Adapted and third-party
+material retains its original copyright and license notices. The root
+LICENSE does not replace those notices or claim ownership of upstream code.
