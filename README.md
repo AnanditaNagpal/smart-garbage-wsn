@@ -166,6 +166,11 @@ connectivity, interference and protocol behaviour still matter.
 
 ## 📊 Recorded experiment results
 
+![Fixed versus adaptive reporting results](experiments/fixed-vs-adaptive/results-comparison.png)
+
+Generated from the recorded logs. One run per scenario; these earlier experiments use the time-based filling model.
+
+
 [Experiment methodology and raw logs](experiments/fixed-vs-adaptive/README.md)
 
 [Generated results table](experiments/fixed-vs-adaptive/RESULTS.md)
@@ -184,3 +189,9 @@ in [LICENSE](LICENSE).
 This project adapts Contiki-NG's rpl-udp example. Adapted and third-party
 material retains its original copyright and license notices. The root
 LICENSE does not replace those notices or claim ownership of upstream code.
+
+## Reading the simulation logs
+
+See the [sample packet walkthrough](docs/LOG_WALKTHROUGH.md) for a real
+BIN_TX and BIN_RX pair, its 26 ms delay calculation, byte accounting,
+and how the measurement window affects inclusion in the results.

@@ -57,3 +57,19 @@ Preserve the supplied evidence logs; save new recordings separately.
 The archived configuration retains its original paths and may contain
 an old output-log destination. Check that destination before rerunning.
 The nested source folder is an archive, not a standalone build directory.
+
+## Regenerate the results graph
+
+Plotting requires Matplotlib. The verified Mac environment used version 3.10.6.
+The numerical analysis itself uses only the Python standard library.
+
+From the repository root, run:
+
+    python3 experiments/fixed-vs-adaptive/plot_results.py
+
+The script calls the analysis function on the supplied logs and creates
+results-comparison.png. Values are calculated from the logs, not hardcoded.
+
+The four panels show application transmissions, payload goodput,
+reconstructed UDP receive throughput and mean application delay.
+Each scenario has one recorded run; no confidence intervals are claimed.
