@@ -195,3 +195,21 @@ LICENSE does not replace those notices or claim ownership of upstream code.
 See the [sample packet walkthrough](docs/LOG_WALKTHROUGH.md) for a real
 BIN_TX and BIN_RX pair, its 26 ms delay calculation, byte accounting,
 and how the measurement window affects inclusion in the results.
+
+## 📊 Multi-seed evaluation
+
+Twelve recorded runs compare fixed and adaptive reporting across three
+random seeds and two radio settings: RX=1.0 and RX=0.9, with TX=1.0.
+
+![Multi-seed reporting comparison](experiments/multi-seed/results-comparison.png)
+
+Bars show means, error bars show sample standard deviations, and dots
+show individual seeds. All 12 runs recorded 100% cohort PDR.
+Reduced reception reliability increased average application delay
+for both policies in these runs.
+
+These experiments use the earlier time-based filling model, separate
+from the enhanced deposit-and-collection demonstration.
+Energy consumption and battery lifetime were not measured.
+
+[Per-run results and across-seed summaries](experiments/multi-seed/RESULTS.md)
