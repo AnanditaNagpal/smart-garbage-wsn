@@ -213,3 +213,14 @@ from the enhanced deposit-and-collection demonstration.
 Energy consumption and battery lifetime were not measured.
 
 [Per-run results and across-seed summaries](experiments/multi-seed/RESULTS.md)
+
+## 👩‍💻 Maintainer
+
+**Anandita Nagpal**  
+B.Tech, Computer and Communication Engineering  
+Manipal University Jaipur
+
+Maintains this repository, documentation and project updates.
+
+**GitHub:** [@AnanditaNagpal](https://github.com/AnanditaNagpal)  
+**Questions and bug reports:** [Open an issue](https://github.com/AnanditaNagpal/smart-garbage-wsn/issues)
